@@ -1,5 +1,5 @@
-Summary:	Audio-entropyd generates entropy-data for the /dev/random device
-#Summary(pl):	
+Summary:	Audio-entropyd - generating entropy-data for the /dev/random device
+Summary(pl):	Audio-entropyd - generowanie danych entropii dla urz±dzenia /dev/random
 Name:		audio-entropyd
 Version:	0.0.6
 Release:	1
@@ -19,8 +19,12 @@ generator with data from soundcard.
 **** This is an alpha release intended for peer review.
 **** DO NOT use this on a production server.
 
-#%description -l pl
-# TODO
+%description -l pl
+Jest to ma³y program karmi±cy generator liczb losowych w j±drze
+Linuksa danymi z karty d¼wiêkowej.
+
+UWAGA: jest to wersja alpha, nie nale¿y u¿ywaæ jej na produkcyjnym
+serwerze.
 
 %prep
 %setup -q
