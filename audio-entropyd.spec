@@ -1,5 +1,5 @@
 Summary:	Audio-entropyd - generating entropy-data for the /dev/random device
-Summary(pl.UTF-8):   Audio-entropyd - generowanie danych entropii dla urządzenia /dev/random
+Summary(pl.UTF-8):	Audio-entropyd - generowanie danych entropii dla urządzenia /dev/random
 Name:		audio-entropyd
 Version:	0.0.6
 Release:	1
