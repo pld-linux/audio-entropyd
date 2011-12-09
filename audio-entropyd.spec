@@ -16,15 +16,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 This is a small program to reseed the Linux kernel random number
 generator with data from soundcard.
 
-**** This is an alpha release intended for peer review.
-**** DO NOT use this on a production server.
-
 %description -l pl.UTF-8
 Jest to mały program karmiący generator liczb losowych w jądrze
 Linuksa danymi z karty dźwiękowej.
-
-UWAGA: jest to wersja alpha, nie należy używać jej na produkcyjnym
-serwerze.
 
 %prep
 %setup -q
