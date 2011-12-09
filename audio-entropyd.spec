@@ -1,15 +1,15 @@
+# TODO: init script
 Summary:	Audio-entropyd - generating entropy-data for the /dev/random device
 Summary(pl.UTF-8):	Audio-entropyd - generowanie danych entropii dla urządzenia /dev/random
 Name:		audio-entropyd
-Version:	0.0.6
+Version:	2.0.3
 Release:	1
 License:	GPL v2
 Group:		Applications/System
 Source0:	http://www.vanheusden.com/aed/%{name}-%{version}.tgz
-# Source0-md5:	ef014b233c08a0f6eb12d2a75c3041b9
-Patch0:		%{name}-ncurses.patch
+# Source0-md5:	44d355a0e61b6f291922fe99462d47e8
 URL:		http://www.vanheusden.com/aed/
-#BuildRequires:	ncurses-devel
+BuildRequires:	alsa-lib-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -28,11 +28,12 @@ serwerze.
 
 %prep
 %setup -q
-%patch0 -p0
 
 %build
 %{__make} \
-	CFLAGS="%{rpmcflags} -DVERSION=\"\$(VERSION)\""
+	CC="%{__cc}" \
+	OPT_FLAGS="%{rpmcflags} -ffast-math" \
+	LFLAGS="%{rpmldflags} -lm -lasound"
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -45,5 +46,5 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc README* TODO
-%attr(755,root,root) %{_sbindir}/*
+%doc README TODO
+%attr(755,root,root) %{_sbindir}/audio-entropyd

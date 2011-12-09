@@ -1,8 +1,0 @@
---- error.c~	2005-01-01 14:24:04.976608208 +0100
-+++ error.c	2005-01-01 14:24:07.388241584 +0100
-@@ -1,4 +1,4 @@
--#include <ncurses.h>
-+/* #include <ncurses/ncurses.h> */
- #include <errno.h>
- #include <stdarg.h>
- #include <stdio.h>
